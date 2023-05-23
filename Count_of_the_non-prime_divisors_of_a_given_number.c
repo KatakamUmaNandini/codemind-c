@@ -1,27 +1,30 @@
 #include<stdio.h>
-int prime(int a){
-    int i,count=0;
-    for(i=1;i<=a;i++){
-        if(a%i==0){
-            count++;
-        }
-    }
-    if(count==2){
-        return 1;
-    }
-    else{
-        return 0;
-    }
-}
-int main()
+int prime(int m)
 {
-    int n,i,c=0;
-    scanf("%d",&n);
-    for(i=1;i<=n;i++)
+    int i,c=0;
+    for(i=1;i<=m;i++)
     {
-        if(n%i==0&&prime(i)==0){
+        if(m%i==0)
+        {
             c++;
         }
     }
-    printf("%d",c);
+    return c;
+}
+int main()
+{
+    int n,i,c,count=0;
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        if(n%i==0)
+        {
+            c=prime(i);
+            if(c!=2)
+            {
+                count++;
+            }
+        }
+    }
+    printf("%d",count);
 }
