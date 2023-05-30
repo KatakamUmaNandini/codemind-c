@@ -1,0 +1,51 @@
+#include<stdio.h>
+int main()
+{
+    char str[1000];
+    scanf("%s",str);
+    int i,s=0;
+    for(i=0;str[i]!=NULL;i++)
+    {
+        if(str[i]=='0')
+        {
+            s=s+0;
+        }
+        if(str[i]=='1')
+        {
+            s=s+1;
+        }
+        if(str[i]=='2')
+        {
+            s=s+2;
+        }
+        if(str[i]=='3')
+        {
+            s=s+3;
+        }
+        if(str[i]=='4')
+        {
+            s=s+4;
+        }
+        if(str[i]=='5')
+        {
+            s=s+5;
+        }
+        if(str[i]=='6')
+        {
+            s=s+6;
+        }
+        if(str[i]=='7')
+        {
+            s=s+7;
+        }
+        if(str[i]=='8')
+        {
+            s=s+8;
+        }
+        if(str[i]=='9')
+        {
+            s=s+9;
+        }
+    }
+    printf("%d",s);
+}
