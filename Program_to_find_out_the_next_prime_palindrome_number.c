@@ -1,47 +1,53 @@
 #include<stdio.h>
-int prime(int t){
-    int i,c=0;
-    for(i=1;i<=t;i++)
+int prime(int k)
+{
+    int c=0,i;
+    for(i=1;i<=k;i++)
     {
-        if(t%i==0){
+        if(k%i==0)
+        {
             c++;
         }
     }
-    if(c==2){
+    if(c==2)
+    {
         return 1;
     }
-    else{
+    else
+    {
         return 0;
     }
 }
-int palindrome(int h){
-    int r=0,t;
-    int g=h;
-    while(h>0){
-        t=h%10;
+int pal(int e)
+{
+    int m=e,t,r=0;
+    while(e!=0)
+    {
+        t=e%10;
         r=(r*10)+t;
-        h=h/10;
+        e=e/10;
     }
-    if(r==g){
+    if(r==m)
+    {
         return 1;
     }
-    else{
+    else
+    {
         return 0;
     }
 }
 int main()
 {
-    int n,z;
+    int n,i,a,b;
     scanf("%d",&n);
-    int i=n+1;
-    while(i){
-        int u=prime(i);
-        int k=palindrome(i);
-        if(u==1 && k==1){
+    for(i=n+1;;i++)
+    {
+        a=prime(i);
+        b=pal(i);
+        if(a==1&&b==1)
+        {
             printf("%d",i);
             break;
         }
-        i=i+1;
-        
     }
 }
