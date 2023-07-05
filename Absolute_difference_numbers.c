@@ -1,43 +1,41 @@
 #include<stdio.h>
 int main()
 {
-    int n,k,t,v=0;
+    int n,k;
     scanf("%d %d",&n,&k);
-    int i,u=n;
-    for(i=0;i<k;i++)
+    int u=n,i,t,r=0;
+    for(i=1;i<=k;i++)
     {
         t=n%10;
-        v=(v*10)+t;
+        r=(r*10)+t;
         n=n/10;
     }
-    int r=0,m;
-    while(v!=0)
+    int rev=0;
+    while(r!=0)
     {
-        m=v%10;
-        r=(r*10)+m;
-        v=v/10;
+        rev=(rev*10)+(r%10);
+        r=r/10;
     }
-    int rev=0,e;
+    int ur=0;
     while(u!=0)
     {
-        e=u%10;
-        rev=(rev*10)+e;
+        ur=(ur*10)+(u%10);
         u=u/10;
     }
-    int y,h=0;
+    int a=0;
     for(i=0;i<k;i++)
     {
-        y=rev%10;
-        h=(h*10)+y;
-        rev=rev/10;
+        a=(a*10)+(ur%10);
+        ur=ur/10;
     }
     int d;
-    if(r>h)
+    if(rev>a)
     {
-        d=r-h;
+        d=rev-a;
     }
-    else{
-        d=h-r;
+    else
+    {
+        d=a-rev;
     }
     printf("%d",d);
 }
