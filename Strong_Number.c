@@ -10,23 +10,29 @@ int fact(int n)
 }
 int main()
 {
-    int n;
-    scanf("%d",&n);
-    int u=n;
-    int t,g,s=0;
-    while(n>0)
+    int t,p;
+    scanf("%d",&t);
+    for(p=0;p<t;p++)
     {
-        t=n%10;
-        g=fact(t);
-        s=s+g;
-        n=n/10;
-    }
-    if(s==u)
-    {
-        printf("The number %d is a strong number",u);
-    }
-    else
-    {
-        printf("The number %d is not a strong number",u);
+        int n,i,k,f,s=0;
+        scanf("%d",&n);
+        int u=n;
+        while(n!=0)
+        {
+            k=n%10;
+            f=fact(k);
+            s=s+f;
+            n=n/10;
+        }
+        if(s==u)
+        {
+            printf("Strong
+");
+        }
+        else
+        {
+            printf("Not Strong
+");
+        }
     }
 }
