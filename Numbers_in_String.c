@@ -1,0 +1,48 @@
+#include<stdio.h>
+int main()
+{
+    int i,s=0;
+    char su[100];
+    scanf("%[^
+]s",su);
+    for(i=0;su[i]!=NULL;i++)
+    {
+        if(su[i]=='1')
+        {
+            s=s+1;
+        }
+        if(su[i]=='2')
+        {
+            s=s+2;
+        }
+        if(su[i]=='3')
+        {
+            s=s+3;
+        }
+        if(su[i]=='4')
+        {
+            s=s+4;
+        }
+        if(su[i]=='5')
+        {
+            s=s+5;
+        }
+        if(su[i]=='6')
+        {
+            s=s+6;
+        }
+        if(su[i]=='7')
+        {
+            s=s+7;
+        }
+        if(su[i]=='8')
+        {
+            s=s+8;
+        }
+        if(su[i]=='9')
+        {
+            s=s+9;
+        }
+    }
+    printf("%d",s);
+}
