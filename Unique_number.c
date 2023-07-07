@@ -1,9 +1,9 @@
 #include<stdio.h>
 int main()
 {
-    int n,t,c=0,i,j,flag=1;
-    scanf("%d",&n);
     int a[100];
+    int n,i,j,flag=1,t,c=0;
+    scanf("%d",&n);
     while(n!=0)
     {
         t=n%10;
@@ -11,10 +11,6 @@ int main()
         c++;
         n=n/10;
     }
-    // for(i=0;i<c;i++)
-    // {
-    //     printf("%d ",a[i]);
-    // }
     for(i=0;i<c;i++)
     {
         for(j=i+1;j<c;j++)
@@ -29,7 +25,7 @@ int main()
     {
         printf("Unique Number");
     }
-    if(flag==0)
+    else
     {
         printf("Not Unique Number");
     }
