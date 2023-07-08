@@ -12,18 +12,18 @@ int add(int n)
 }
 int count(int n)
 {
-    int c=0,t;
+    int s=0,t;
     while(n!=0)
     {
         t=n%10;
-        c++;
+        s++;
         n=n/10;
     }
-    return c;
+    return s;
 }
 int main()
 {
-    int n,i,c;
+    int n,c,i;
     scanf("%d",&n);
     for(i=1;;i++)
     {
