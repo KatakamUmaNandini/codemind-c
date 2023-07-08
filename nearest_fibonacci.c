@@ -1,10 +1,8 @@
 #include<stdio.h>
 int main()
 {
-    int n;
+    int n,a=0,b=1,c,i=1,j,k;
     scanf("%d",&n);
-    int a=0,b=1,c,i=1;
-    int j,k;
     while(i<=n)
     {
         if(n>a&&n<b)
@@ -16,7 +14,6 @@ int main()
         c=a+b;
         a=b;
         b=c;
-        i+=1;
     }
     if(n-j<k-n)
     {
@@ -26,8 +23,7 @@ int main()
     {
         printf("%d",k);
     }
-    else
-    {
+    else{
         printf("%d ",j);
         printf("%d",k);
     }
