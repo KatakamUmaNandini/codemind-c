@@ -16,7 +16,7 @@ int count(int n)
     while(n!=0)
     {
         t=n%10;
-        s++;
+        s+=1;
         n=n/10;
     }
     return s;
@@ -25,13 +25,13 @@ int main()
 {
     int n,c,i;
     scanf("%d",&n);
-    for(i=1;;i++)
+    for(i=0;;i++)
     {
         n=add(n);
         c=count(n);
         if(c==1)
         {
-            if(n==1||n==7)
+            if(n==1 || n==7)
             {
                 printf("True");
             }
