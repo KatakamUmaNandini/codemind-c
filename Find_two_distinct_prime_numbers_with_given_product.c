@@ -1,7 +1,7 @@
 #include<stdio.h>
 int prime(int n)
 {
-    int c=0,i;
+    int i,c=0;
     for(i=1;i<=n;i++)
     {
         if(n%i==0)
@@ -9,22 +9,31 @@ int prime(int n)
             c+=1;
         }
     }
-    return c;
+    if(c==2)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
 }
 int main()
 {
-    int n,i;
+    int n,i,k,c=0;
     scanf("%d",&n);
-    int a[10],c=0;
+    int a[10];
     for(i=1;i<=n;i++)
     {
-        if(n%i==0)
+        if(c==2)
         {
-            if(prime(i)==2)
-            {
-                a[c]=i;
-                c+=1;
-            }
+            break;
+        }
+        k=prime(i);
+        if(n%i==0 && k==1)
+        {
+            a[c]=i;
+            c+=1;
         }
     }
     if(c<2)
@@ -33,10 +42,9 @@ int main()
     }
     else
     {
-        for(i=0;i<=1;i++)
+        for(i=0;i<c;i++)
         {
             printf("%d ",a[i]);
         }
     }
-    
 }
